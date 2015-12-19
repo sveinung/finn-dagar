@@ -39,6 +39,6 @@ public class Datoar {
 
     public static final List<LocalDate> ALLE_DATOAR = new ArrayList<LocalDate>() {{
         addAll(DATOAR_1);
-        addAll(Datoar.DATOAR_2);
+        addAll(DATOAR_2);
     }};
 }

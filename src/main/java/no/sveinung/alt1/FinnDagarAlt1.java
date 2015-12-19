@@ -5,7 +5,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class FinnDagarAlt1 {
-    private static final int MINIMUM_FOR_Å_BLI_TALT_MED = 5;
+    private static final int MINIMUM_ANTAL_FOR_Å_BLI_TALT_MED = 5;
+
     private final List<LocalDate> datoar;
 
     public FinnDagarAlt1(List<LocalDate> datoar) {
@@ -15,7 +16,7 @@ public class FinnDagarAlt1 {
     public List<Integer> finn() {
         Map<Integer, Integer> forekomstar = finnForekomstarAvDatoar(this.datoar);
 
-        List<Integer> dagar = finnSannsynligeDagar(forekomstar);
+        List<Integer> dagar = finnSannsynligeDagar(forekomstar, MINIMUM_ANTAL_FOR_Å_BLI_TALT_MED);
 
         return dagar;
     }
@@ -31,9 +32,9 @@ public class FinnDagarAlt1 {
         return forekomstar;
     }
 
-    private List<Integer> finnSannsynligeDagar(Map<Integer, Integer> forekomstar) {
+    private List<Integer> finnSannsynligeDagar(Map<Integer, Integer> forekomstar, int minimumAntalForÅBliTaltMed) {
         return forekomstar.entrySet().stream()
-                .filter((dagOgAntal) -> dagOgAntal.getValue() >= MINIMUM_FOR_Å_BLI_TALT_MED)
+                .filter((dagOgAntal) -> dagOgAntal.getValue() >= minimumAntalForÅBliTaltMed)
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
     }
