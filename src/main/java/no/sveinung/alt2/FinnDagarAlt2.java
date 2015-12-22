@@ -8,14 +8,8 @@ import java.util.stream.Collectors;
 public class FinnDagarAlt2 {
     private static final int AVSTAND_MELLOM_CLUSTER = 4;
 
-    private final List<LocalDate> datoar;
-
-    public FinnDagarAlt2(List<LocalDate> datoar) {
-        this.datoar = datoar;
-    }
-
-    public List<Integer> finn() {
-        List<Integer> sorterteDagar = this.datoar.stream()
+    public static List<Integer> finn(List<LocalDate> datoar) {
+        List<Integer> sorterteDagar = datoar.stream()
                 .map(LocalDate::getDayOfMonth)
                 .sorted()
                 .collect(Collectors.toList());
@@ -35,7 +29,7 @@ public class FinnDagarAlt2 {
         return dagar;
     }
 
-    private List<List<Integer>> clustringAvDagar(List<Integer> sorterteDagar) {
+    private static List<List<Integer>> clustringAvDagar(List<Integer> sorterteDagar) {
         List<List<Integer>> clusters = new ArrayList<>();
         List<Integer> noverandeCluster = new ArrayList<>();
         clusters.add(noverandeCluster);
