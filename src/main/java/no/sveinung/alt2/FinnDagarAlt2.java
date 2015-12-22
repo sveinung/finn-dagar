@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 public class FinnDagarAlt2 {
     private static final int AVSTAND_MELLOM_CLUSTER = 2;
+    private static final int MINIMUM_STORLEIK_PÅ_CLUSTER = 4;
 
     public static List<Integer> finn(List<LocalDate> datoar) {
         List<Integer> sorterteDagar = datoar.stream()
@@ -17,7 +18,7 @@ public class FinnDagarAlt2 {
         List<List<Integer>> clusters = clustringAvDagar(sorterteDagar);
 
         List<Integer> dagar = clusters.stream()
-                .filter((cluster) -> cluster.size() > 4)
+                .filter((cluster) -> cluster.size() > MINIMUM_STORLEIK_PÅ_CLUSTER)
                 .map((cluster) -> cluster.stream()
                         .mapToInt(Integer::valueOf)
                         .average()
