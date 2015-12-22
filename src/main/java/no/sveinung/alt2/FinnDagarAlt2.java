@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class FinnDagarAlt2 {
-    private static final int AVSTAND_MELLOM_CLUSTER = 4;
+    private static final int AVSTAND_MELLOM_CLUSTER = 2;
 
     public static List<Integer> finn(List<LocalDate> datoar) {
         List<Integer> sorterteDagar = datoar.stream()

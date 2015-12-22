@@ -26,4 +26,14 @@ public class FinnDagarAlt1Test {
                 .contains(30, 15)
                 .hasSize(2);
     }
+
+    @Test
+    public void finn_to_dagar_som_ligg_nærme_kvarandre()
+    {
+        List<Integer> dagar = FinnDagarAlt1.finn(Datoar.TO_NÆRLIGGANDE_SETT);
+
+        assertThat(dagar)
+                .contains(20, 15)
+                .hasSize(2);
+    }
 }
