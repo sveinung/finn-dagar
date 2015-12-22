@@ -37,7 +37,7 @@ public class Datoar {
             LocalDate.of(2015, 1, 15)
     );
 
-    public static final List<LocalDate> ALLE_DATOAR = new ArrayList<LocalDate>() {{
+    public static final List<LocalDate> TO_LITT_SPREIDDE_SETT = new ArrayList<LocalDate>() {{
         addAll(DATOAR_1);
         addAll(DATOAR_2);
     }};

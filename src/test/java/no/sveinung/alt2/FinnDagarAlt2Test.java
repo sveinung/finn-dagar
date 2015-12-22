@@ -20,7 +20,7 @@ public class FinnDagarAlt2Test {
 
     @Test
     public void finn_to_dagar_per_månad() {
-        List<Integer> dagar = FinnDagarAlt2.finn(Datoar.ALLE_DATOAR);
+        List<Integer> dagar = FinnDagarAlt2.finn(Datoar.TO_LITT_SPREIDDE_SETT);
 
         assertThat(dagar)
                 .contains(30, 15)
