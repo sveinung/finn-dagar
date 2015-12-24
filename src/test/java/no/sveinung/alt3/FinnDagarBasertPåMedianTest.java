@@ -1,7 +1,6 @@
 package no.sveinung.alt3;
 
 import no.sveinung.Datoar;
-import no.sveinung.alt2.FinnDagarAlt2;
 import org.junit.Test;
 
 import java.util.List;

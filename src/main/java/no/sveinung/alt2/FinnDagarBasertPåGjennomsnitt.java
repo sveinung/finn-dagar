@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class FinnDagarAlt2 {
+public class FinnDagarBasertPåGjennomsnitt {
     private static final int AVSTAND_MELLOM_CLUSTER = 2;
     private static final int MINIMUM_STORLEIK_PÅ_CLUSTER = 4;
 
